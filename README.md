@@ -27,15 +27,15 @@ The dataset used in this experiment is MNIST.
 
 ---
 
-## 2. Experimental Setup
+## Experimental Setup
 
-### 2.1 Dataset
+### Dataset
 
 - Dataset: MNIST
 - Image resolution: 28 × 28
 - Number of classes: 10
 
-### 2.2 Attack and Training Configuration
+### Attack and Training Configuration
 
 | Parameter | Setting |
 |------------|----------|
@@ -49,9 +49,9 @@ During training, adversarial examples are generated dynamically for each batch, 
 
 ---
 
-## 3. Key Training Results
+## Key Training Results
 
-### 3.1 Early Stage (0–3000 steps)
+### Early Stage (0–3000 steps)
 
 | Step | Natural Accuracy | Adversarial Accuracy |
 |------|------------------|----------------------|
@@ -68,7 +68,7 @@ This behavior is consistent with typical early-stage adversarial training dynami
 
 ---
 
-### 3.2 Middle Stage (3000–20000 steps)
+### Middle Stage (3000–20000 steps)
 
 | Checkpoint | Natural Accuracy | Adversarial Accuracy |
 |------------|------------------|----------------------|
@@ -85,7 +85,7 @@ Robust feature learning emerges during this phase.
 
 ---
 
-### 3.3 Late Stage (90000+ steps)
+### Late Stage (90000+ steps)
 
 | Checkpoint | Natural Accuracy | Adversarial Accuracy |
 |------------|------------------|----------------------|
@@ -98,9 +98,9 @@ Final Robust Accuracy: 90.26%
 
 ---
 
-## 4. Training Dynamics Analysis
+## Training Dynamics Analysis
 
-### 4.1 Growth Pattern of Adversarial Accuracy
+### Growth Pattern of Adversarial Accuracy
 
 Adversarial accuracy increases steadily from 0% to above 90%, with the following characteristics:
 
@@ -110,7 +110,7 @@ Adversarial accuracy increases steadily from 0% to above 90%, with the following
 
 ---
 
-### 4.2 Trade-off Between Natural and Robust Accuracy
+### Trade-off Between Natural and Robust Accuracy
 
 Final performance:
 
@@ -123,7 +123,7 @@ This aligns with robust optimization theory: under moderate perturbation constra
 
 ---
 
-## 5. Interpretation of Results
+## Interpretation of Results
 
 PGD adversarial training optimizes worst-case risk. As training progresses:
 
@@ -135,7 +135,7 @@ Because MNIST is relatively low-dimensional and well-separated, achieving approx
 
 ---
 
-## 6. Conclusion
+## Conclusion
 
 This experiment successfully reproduces PGD adversarial training on MNIST. The main conclusions are:
 

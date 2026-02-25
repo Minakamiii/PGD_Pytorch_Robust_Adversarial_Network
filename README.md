@@ -3,12 +3,13 @@ A Pytorch re-implementation of the paper "Towards Deep Learning Models Resistant
 
 This project reproduces the adversarial training framework proposed in *Towards Deep Learning Models Resistant to Adversarial Attacks* (Madry et al., 2017). The paper formulates adversarial robustness as a robust optimization problem:
 
-\[
-\min_{\theta} \mathbb{E}_{(x,y)} \left[ 
-\max_{\|\delta\|_\infty \le \varepsilon} 
-\mathcal{L}(f_\theta(x+\delta), y) 
-\right]
-\]
+$$
+\min_{\theta} \mathbb{E}_{(x,y)\sim \mathcal{D}}
+\left[
+\max_{\delta \in \mathcal{S}} 
+\mathcal{L}(f_\theta(x+\delta), y)
+\right].
+$$
 
 where:
 
